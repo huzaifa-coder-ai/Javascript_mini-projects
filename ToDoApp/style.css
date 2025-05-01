@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.nav ul li {
+  margin: 0;
+  padding: 14px 50px;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.nav ul li:hover{
+    border-bottom: 2px solid #fff;
+}
+.nav ul li i{
+    padding: 9px;
+}
+h1{
+    color: white;
+    padding: 10px;
+    font-size: 38px;
+    margin-left: 30px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    color: #3b384b;
+    padding: 30px;
+    margin-left: 120px;
+    margin-top: 100px;
+    max-width: 750px;
+    background: #ffffff;
+    border-radius: 12px;
+    position: relative;
+}
+.container h2{
+    font-size: 30px;
+    padding: 22px;
+    margin-top: -30px;
+}
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+.input-wrapper input {
+    padding: 22px 50px 22px 22px;
+    width: 100%;
+    border-radius: 30px;
+    outline: none;
+    border: 1.5px solid #3b384b;
+    font-size: 20px;
+}
+.input-wrapper i {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 27px;
+    cursor: pointer;
+}
+#warning{
+    color: red;
+    margin: 15px;
+}
+.notes-container{
+    padding: 40px;
+    margin-left: 100px;
+    color: white;
+    max-width: 800px;
+}
+.notes-container h3{
+    font-size: 32px;
+}
+.notes-container ul{
+    padding: 22px;
+    margin-top: 20px;
+    list-style: none;
+    border-radius: 30px;
+    font-size: 19px;
+}
+.notes-container ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .notes-container ul li:last-child {
+    margin-bottom: 0;
+} */
+.notes-container ul li i {
+    cursor: pointer;
+    color: #ff6b6b;
+    transition: 0.2s;
+}
+.notes-container ul li i:hover {
+    transform: scale(1.2);
+}
