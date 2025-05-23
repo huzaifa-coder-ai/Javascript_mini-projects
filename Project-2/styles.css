@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --success-color: #00b894;
+    --danger-color: #d63031;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--light-color);
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.app-header .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.calculator-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group .currency-symbol {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.tip-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tip-btn {
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tip-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.tip-btn.active {
+    background-color: var(--primary-color);
+    transform: scale(0.98);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.calculate-btn {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.calculate-btn:hover {
+    background-color: #00997b;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.results-container {
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+.results-container h2 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.highlight {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .tip-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .tip-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calculator-container {
+        padding: 20px;
+    }
+}

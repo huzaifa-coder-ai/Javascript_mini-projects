@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator | JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><i class="fas fa-calculator"></i> Tip Calculator</h1>
+            <p class="subtitle">Calculate your tips with ease</p>
+        </header>
+
+        <main class="calculator-container">
+            <div class="input-group">
+                <label for="amount">
+                    <i class="fas fa-receipt"></i> Bill Amount
+                    <span class="currency-symbol">$</span>
+                </label>
+                <input type="number" id="amount" placeholder="0.00" min="0" step="0.01">
+            </div>
+
+            <div class="input-group">
+                <label for="tip">
+                    <i class="fas fa-percentage"></i> Tip Percentage
+                </label>
+                <div class="tip-options">
+                    <button class="tip-btn" data-percentage="5">5%</button>
+                    <button class="tip-btn" data-percentage="10">10%</button>
+                    <button class="tip-btn" data-percentage="15">15%</button>
+                    <button class="tip-btn" data-percentage="20">20%</button>
+                    <button class="tip-btn" data-percentage="25">25%</button>
+                </div>
+                <input type="number" id="tip" placeholder="Custom %" min="0" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="peoples">
+                    <i class="fas fa-users"></i> Number of People
+                </label>
+                <input type="number" id="peoples" placeholder="1" min="1">
+            </div>
+
+            <div class="button-group">
+                <button id="execute" class="btn calculate-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <button id="reset" class="btn reset-btn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
+
+            <div class="results-container" id="result">
+                <h2><i class="fas fa-chart-pie"></i> Results</h2>
+                <div class="result-item">
+                    <span>Tip Amount:</span>
+                    <span id="tip2">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Total Bill:</span>
+                    <span id="total-bill">$0.00</span>
+                </div>
+                <div class="result-item highlight">
+                    <span>Each Person Pays:</span>
+                    <span id="per-peoples">$0.00</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

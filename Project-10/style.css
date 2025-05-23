@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primarycolor: #fff;
+    --borderRadius: 14px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #1790d6, #353da8, #7b4397, #1de9b6);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--primarycolor);
+    font-size: 39px;
+    margin-top: 33px;
+    animation: shake 3s infinite ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    75% {
+      transform: translateX(-2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 570px;
+    margin: 90px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow);
+    color: var(--primarycolor);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  h2 {
+    color: var(--primarycolor);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="number"]
+   {
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .wrapper1,
+  .wrapper3,
+  .wrapper4 {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1790d6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #147bbf;
+  }
+  
+  #result {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --textcolor: #333;
+    --primary: #96e6a1;
+    --bg-gradient: linear-gradient(120deg, #d4fc79, #96e6a1);
+    --container-bg: #f6fcff;
+}
+
+body {
+    background: var(--bg-gradient);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 44px;
+    color: var(--textcolor);
+    margin: 40px 0 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 560px;
+    max-width: 90%;
+    background-color: var(--container-bg);
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(100, 200, 150, 0.2);
+    padding: 30px 20px;
+}
+
+.container h2 {
+    color: var(--textcolor);
+    margin-bottom: 20px;
+    font-size: 29px;
+    text-align: center;
+}
+
+.container i {
+    font-size: 26px;
+    margin-right: 4px;
+}
+
+.container input {
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid var(--primary);
+    font-size: 18px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.container input:hover {
+    border: 2px solid #000;
+}
+
+button {
+    padding: 16px 28px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: var(--primary);
+    font-size: 18px;
+    color: var(--textcolor);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7fd693;
+}
+
+ul {
+    font-size: 22px;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    background: #eafbf0;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: red;
+    text-align: center;
+}
+
+/* ------------------ */
+/* Responsive Design  */
+/* ------------------ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .container input {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    ul {
+        font-size: 20px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .container input {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 14px 22px;
+        font-size: 16px;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+.delet-btn{
+    margin-left: 16px;
+    cursor: pointer;
+    color: red;
+}

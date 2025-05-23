@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    position: relative;
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  #image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fa-solid {
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  #less {
+    left: 10px;
+  }
+  
+  #greater {
+    right: 10px;
+  }
+  
+  .dots {
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
